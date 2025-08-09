@@ -13,8 +13,8 @@ public class Car extends Vehicle {
      * @param owner              the owner of the car
      * @param numberOfDoors      the number of doors
      */
-    public Car(String brand, String model, String registrationNumber, Person owner
-            , int numberOfDoors) {
+    public Car(String brand, String model, String registrationNumber, Person owner,
+               int numberOfDoors) {
         super(brand, model, registrationNumber, owner);
         this.numberOfDoors = numberOfDoors;
     }
@@ -27,11 +27,11 @@ public class Car extends Vehicle {
     @Override
     public String getInfo() {
         return "Car:\n"
-                +"  Brand: " + brand + "\n"
-                +"  Model: " + model + "\n"
-                +"  Registration Number: " + registrationNumber + "\n"
-                +"  Number of Doors: " + numberOfDoors + "\n"
-                +"  Belongs to " + owner.getName() + " - " + owner.getAddress();
+                + "  Brand: " + brand + "\n"
+                + "  Model: " + model + "\n"
+                + "  Registration Number: " + registrationNumber + "\n"
+                + "  Number of Doors: " + numberOfDoors + "\n"
+                + "  Belongs to " + owner.getName() + " - " + owner.getAddress();
     }
 
     public int getNumberOfDoors() {
