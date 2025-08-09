@@ -13,8 +13,8 @@ public class MotorBike extends Vehicle {
      * @param owner              the owner of the motorbike
      * @param hasSidecar         whether the motorbike has a sidecar
      */
-    public MotorBike(String brand, String model, String registrationNumber, Person owner
-            , boolean hasSidecar) {
+    public MotorBike(String brand, String model, String registrationNumber, Person owner,
+                     boolean hasSidecar) {
         super(brand, model, registrationNumber, owner);
         this.hasSidecar = hasSidecar;
     }
@@ -37,7 +37,7 @@ public class MotorBike extends Vehicle {
                 : "");
     }
 
-    public boolean isHasSidecar() {
+    public boolean getHasSidecar() {
         return hasSidecar;
     }
 
