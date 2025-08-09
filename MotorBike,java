@@ -1,0 +1,43 @@
+/**
+ * Represents a motorbike, which is a type of vehicle.
+ */
+public class MotorBike extends Vehicle {
+    private boolean hasSidecar;
+
+    /**
+     * Constructs a MotorBike with specified attributes.
+     *
+     * @param brand              the brand of the motorbike
+     * @param model              the model of the motorbike
+     * @param registrationNumber the registration number
+     * @param owner              the owner of the motorbike
+     * @param hasSidecar         whether the motorbike has a sidecar
+     */
+    public MotorBike(String brand, String model, String registrationNumber, Person owner, boolean hasSidecar) {
+        super(brand, model, registrationNumber, owner);
+        this.hasSidecar = hasSidecar;
+    }
+
+    /**
+     * Returns formatted information about the motorbike.
+     *
+     * @return motorbike details as a String
+     */
+    @Override
+    public String getInfo() {
+        return "Motor Bike:\n" +
+                "  Brand: " + brand + "\n" +
+                "  Model: " + model + "\n" +
+                "  Registration Number: " + registrationNumber + "\n" +
+                "  Has Side Car: " + hasSidecar + "\n" +
+                "  Belongs to " + owner.getName() + " - " + owner.getAddress();
+    }
+
+    public boolean hasSidecar() { 
+        return hasSidecar; 
+    }
+    
+    public void setSidecar(boolean hasSidecar) { 
+        this.hasSidecar = hasSidecar; 
+    }
+}
