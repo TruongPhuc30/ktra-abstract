@@ -24,14 +24,14 @@ public class Car extends Vehicle {
      *
      * @return car details as a String
      */
-    @Override
+   @Override
     public String getInfo() {
         return "Car:\n\t"
-                + "  Brand: " + brand + "\n\t"
-                + "  Model: " + model + "\n\t"
-                + "  Registration Number: " + registrationNumber + "\n\t"
-                + "  Number of Doors: " + numberOfDoors + "\n\t"
-                + "  Belongs to " + owner.getName() + " - " + owner.getAddress();
+                + "Brand: " + brand + "\n\t"
+                + "Model: " + model + "\n\t"
+                + "Registration Number: " + registrationNumber + "\n\t"
+                + "Number of Doors: " + numberOfDoors + "\n\t"
+                + "Belongs to " + owner.getName() + " - " + owner.getAddress();
     }
 
     public int getNumberOfDoors() {
