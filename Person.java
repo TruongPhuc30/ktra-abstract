@@ -1,16 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Represents a person who can own multiple vehicles.
+ * Đại diện cho một người có thể sở hữu nhiều phương tiện.
  */
 public class Person {
+    /** Tên của người. */
     private String name;
+
+    /** Địa chỉ của người. */
     private String address;
+
+    /** Danh sách các phương tiện mà người này sở hữu. */
     private List<Vehicle> vehicleList;
 
     /**
-     * Constructs a Person with a name and address.
+     * Khởi tạo một đối tượng Person với tên và địa chỉ.
      *
-     * @param name    the person's name
-     * @param address the person's address
+     * @param name    tên của người
+     * @param address địa chỉ của người
      */
     public Person(String name, String address) {
         this.name = name;
@@ -19,41 +27,57 @@ public class Person {
     }
 
     /**
-     * Adds a vehicle to the person's list.
+     * Thêm một phương tiện vào danh sách sở hữu của người.
      *
-     * @param vehicle the vehicle to add
+     * @param vehicle phương tiện cần thêm
      */
     public void addVehicle(Vehicle vehicle) {
         vehicleList.add(vehicle);
     }
 
     /**
-     * Removes a vehicle from the list by registration number.
+     * Xóa một phương tiện khỏi danh sách sở hữu dựa trên biển số.
      *
-     * @param registrationNumber the registration number of the vehicle to remove
+     * @param registrationNumber biển số của phương tiện cần xóa
      */
     public void removeVehicle(String registrationNumber) {
         vehicleList.removeIf(v -> v.getRegistrationNumber().equals(registrationNumber));
     }
 
     /**
-     * Returns information about all vehicles owned by the person.
+     * Trả về thông tin của tất cả phương tiện mà người này sở hữu.
+     * Nếu không có phương tiện nào, trả về thông báo phù hợp.
      *
-     * @return a formatted string of vehicle details
+     * @return chuỗi thông tin về các phương tiện
      */
     public String getVehiclesInfo() {
+        if (vehicleList.isEmpty()) {
+            return name + " has no vehicle!";
+        }
+
         StringBuilder sb = new StringBuilder();
+        sb.append(name).append(" has:\n");
         for (Vehicle v : vehicleList) {
             sb.append(v.getInfo()).append("\n");
         }
-        return sb.toString();
+        return sb.toString().trim();
     }
 
-    public String getName() { 
-        return name; 
+    /**
+     * Trả về tên của người.
+     *
+     * @return tên
+     */
+    public String getName() {
+        return name;
     }
-    
-    public String getAddress() { 
-        return address; 
+
+    /**
+     * Trả về địa chỉ của người.
+     *
+     * @return địa chỉ
+     */
+    public String getAddress() {
+        return address;
     }
 }
