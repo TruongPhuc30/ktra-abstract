@@ -26,11 +26,11 @@ public class Car extends Vehicle {
      */
     @Override
     public String getInfo() {
-        return "Car:\n"
-                + "  Brand: " + brand + "\n"
-                + "  Model: " + model + "\n"
-                + "  Registration Number: " + registrationNumber + "\n"
-                + "  Number of Doors: " + numberOfDoors + "\n"
+        return "Car:\n\t"
+                + "  Brand: " + brand + "\n\t"
+                + "  Model: " + model + "\n\t"
+                + "  Registration Number: " + registrationNumber + "\n\t"
+                + "  Number of Doors: " + numberOfDoors + "\n\t"
                 + "  Belongs to " + owner.getName() + " - " + owner.getAddress();
     }
 
