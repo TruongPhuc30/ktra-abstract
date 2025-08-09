@@ -26,13 +26,13 @@ public class MotorBike extends Vehicle {
      */
     @Override
     public String getInfo() {
-        return "Motor Bike:\n"
-                + "Brand: " + brand + "\n"
-                + "Model: " + model + "\n"
-                + "Registration Number: " + getRegistrationNumber() + "\n"
+        return "Motor Bike:\n\t"
+                + "Brand: " + brand + "\n\t"
+                + "Model: " + model + "\n\t"
+                + "Registration Number: " + getRegistrationNumber() + "\n\t"
                 + "Has Side Car: " + hasSidecar
                 + (getOwner() != null
-                ? "\nBelongs to " + getOwner().getName()
+                ? "\n\tBelongs to " + getOwner().getName()
                 + " - " + getOwner().getAddress()
                 : "");
     }
