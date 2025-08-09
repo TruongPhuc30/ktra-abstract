@@ -26,14 +26,19 @@ public class Car extends Vehicle {
      */
     @Override
     public String getInfo() {
-        return "Car:\n" 
-                +"  Brand: " + brand + "\n" 
-                +"  Model: " + model + "\n" 
-                +"  Registration Number: " + registrationNumber + "\n" 
-                +"  Number of Doors: " + numberOfDoors + "\n" 
+        return "Car:\n"
+                +"  Brand: " + brand + "\n"
+                +"  Model: " + model + "\n"
+                +"  Registration Number: " + registrationNumber + "\n"
+                +"  Number of Doors: " + numberOfDoors + "\n"
                 +"  Belongs to " + owner.getName() + " - " + owner.getAddress();
     }
 
     public int getNumberOfDoors() {
         return numberOfDoors;
     }
+
+    public void setNumberOfDoors(int numberOfDoors) {
+        this.numberOfDoors = numberOfDoors;
+    }
+}
