@@ -24,9 +24,8 @@ public class Car extends Vehicle {
      *
      * @return car details as a String
      */
-   @Override
     public String getInfo() {
-        return "Car:\n\t"
+        return "\nCar:\n\t"
                 + "Brand: " + brand + "\n\t"
                 + "Model: " + model + "\n\t"
                 + "Registration Number: " + registrationNumber + "\n\t"
