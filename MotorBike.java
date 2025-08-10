@@ -41,7 +41,7 @@ public class MotorBike extends Vehicle {
         return hasSidecar;
     }
 
-    public void setSidecar(boolean hasSidecar) {
+    public void setHasSidecar(boolean hasSidecar) {
         this.hasSidecar = hasSidecar;
     }
 }
