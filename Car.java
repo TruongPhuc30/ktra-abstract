@@ -25,7 +25,7 @@ public class Car extends Vehicle {
      * @return car details as a String
      */
     public String getInfo() {
-        return "\nCar:\n\t"
+        return "Car:\n\t"
                 + "Brand: " + brand + "\n\t"
                 + "Model: " + model + "\n\t"
                 + "Registration Number: " + registrationNumber + "\n\t"
