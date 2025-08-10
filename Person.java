@@ -58,7 +58,7 @@ public class Person {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append(name).append(" has:\n");
+        sb.append(name).append(" has:\n\n");
         for (Vehicle v : vehicleList) {
             sb.append(v.getInfo()).append("\n");
         }
