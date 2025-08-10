@@ -26,13 +26,15 @@ public class Person {
         this.vehicleList = new ArrayList<>();
     }
 
-    /**
-     * Thêm một phương tiện vào danh sách sở hữu của người.
+   /**
+     * Thêm phương tiện vào danh sách nếu chưa tồn tại.
      *
      * @param vehicle phương tiện cần thêm
      */
     public void addVehicle(Vehicle vehicle) {
-        vehicleList.add(vehicle);
+        if (!vehicleList.contains(vehicle)) {
+            vehicleList.add(vehicle);
+        }
     }
 
     /**
