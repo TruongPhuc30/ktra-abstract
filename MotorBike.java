@@ -19,6 +19,14 @@ public class MotorBike extends Vehicle {
         this.hasSidecar = hasSidecar;
     }
 
+    public boolean getHasSidecar() {
+        return hasSidecar;
+    }
+
+    public void setHasSidecar(boolean hasSidecar) {
+        this.hasSidecar = hasSidecar;
+    }
+
     /**
      * Returns formatted information about the motorbike.
      *
@@ -35,13 +43,5 @@ public class MotorBike extends Vehicle {
                 ? "\n\tBelongs to " + getOwner().getName()
                 + " - " + getOwner().getAddress()
                 : "");
-    }
-
-    public boolean getHasSidecar() {
-        return hasSidecar;
-    }
-
-    public void setHasSidecar(boolean hasSidecar) {
-        this.hasSidecar = hasSidecar;
     }
 }
