@@ -26,7 +26,7 @@ public class Person {
         this.vehicleList = new ArrayList<>();
     }
 
-   /**
+    /**
      * Thêm phương tiện vào danh sách nếu chưa tồn tại.
      *
      * @param vehicle phương tiện cần thêm
